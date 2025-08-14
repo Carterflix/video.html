@@ -1,0 +1,86 @@
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: #000;
+    font-family: 'Press Start 2P', monospace;
+  }
+
+  #my-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Floating buttons container */
+  .top-buttons {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 6px;
+    z-index: 9999;
+  }
+
+  .top-buttons a, .top-buttons button {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', monospace;
+    transition: background 0.2s;
+  }
+
+  .top-buttons a:hover,
+  .top-buttons button:hover {
+    background: rgba(255,0,0,0.8);
+  }
+
+  .video-js .vjs-current-time,
+  .video-js .vjs-duration {
+    font-family: 'Press Start 2P', monospace !important;
+    font-size: 9px !important;
+    line-height: 1;
+    padding: 4px 8px;
+    margin: 0;
+    background: rgba(0,0,0,0.35);
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .vjs-markers .vjs-marker {
+    width: 8px !important;
+    bottom: 12px !important;
+    background-color: red !important;
+  }
+
+  .vjs-markers .vjs-marker .marker-label {
+    position: absolute !important;
+    bottom: 48px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Press Start 2P', monospace !important;
+    font-size: 10px !important;
+    padding: 6px 8px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 5px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  @media (max-width: 600px) {
+    .video-js .vjs-duration {
+      display: none;
+    }
+    .vjs-markers .vjs-marker .marker-label {
+      bottom: 56px !important;
+      font-size: 9px !important;
+    }
+  }
